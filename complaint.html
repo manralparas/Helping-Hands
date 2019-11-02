@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="complaint.css">
+    
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <script type="text/javascript">
+      $(document).ready(function(){
+       $(window).scroll(function(){
+         var x=$(window).scrollTop();
+         if(x>50){
+          $(".navbar").css("background","#555");
+
+         }
+        else
+          $(".navbar").css("background","transparent");  
+
+       })
+
+
+      })</script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo"><a href="#default" class="logo">Helping Hand</a></div>
+        <div class="menu">
+          <ul>
+            <li><a  href="index.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a   href="complaint.html">File A Complaint</a></li>
+            <li><a  href="login.html">Log in</a></li>
+            <li><a href="signup.html">Sign up</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  <div class="complaint-form">
+      <h1>File a Complaint</h1>
+  <form class="text" action="index.html" onsubmit="fun()">
+     <label>Name:</label>
+    <input type="text"  name="" placeholder="" required="">
+    <label>Mobile No.:</label>
+    <input type="number" >
+    <label>Email:</label>
+    <input type="email" name="" value="" required="">
+    <label>Date:</label>
+    <input type="date"  name="" required="">
+
+    <label>Bill No./Invoice No. (if any):</label>
+    <input type="number"  name="" value="" required="">
+    <label>Topic:</label>
+    <select class="complaint-form-text">
+      <option value="services">Airline Complaints</option>
+      <option value="services">Banking Complaints</option>
+      <option value="services">Postal Complaints</option>
+      <option value="services">Medical Complaints</option>
+      <option value="services">Travel Complaints</option>
+      <option value="services">Telecom Complaints</option>
+      <option value="services">E-commerce Complaints</option>
+      <option value="services">Insurance Complaints</option>
+      <option value="services">Home Appliances Complaints</option>
+      <option value="services">Government Complaints</option>
+      <option value="services">Electricity Complaints</option>
+      <option value="services">Water Complaints</option>
+      <option value="services">Education Complaints</option>
+      <option value="services">D2H Complaints</option>
+      <option value="services">Job Complaints</option>
+      <option value="services">Food Complaints</option>
+      <option value="services">ISP Complaints</option>
+      <option value="services">Automobile Complaints</option>
+      <option value="services">Mobile/laptop Complaints</option>
+      <option value="services">Real Estate Complaints</option>
+    </select><br><br><br>
+
+    <textarea class="complaint-form-text"" placeholder="Write your complaint.." rows="5"></textarea>
+   <input type="submit" class="btn" value="Submit" >
+
+ </form>
+</div>
+</body>
+<script type="text/javascript">
+  function fun(){
+    var c=Math.floor((Math.random()*1000000)+1);
+    alert("Your Complaints is Registered ref no is "+c+", Please check your email for further process");
+  }
+</script>
+</html>
